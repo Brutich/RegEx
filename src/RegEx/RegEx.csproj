@@ -47,5 +47,17 @@
     <Compile Include="Regex.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
+  <ItemGroup>
+    <Content Include="RegEx_DynamoCustomization.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="pkg.json" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>copy /Y "$(TargetDir)$(ProjectName).dll" "C:\Users\oleg8\AppData\Roaming\Dynamo\Dynamo Revit\2.1\packages\RegEx\bin\$(ProjectName).dll"
+copy /Y "$(TargetDir)$(ProjectName).xml" "C:\Users\oleg8\AppData\Roaming\Dynamo\Dynamo Revit\2.1\packages\RegEx\bin\$(ProjectName).xml"
+copy /Y "$(ProjectDir)$(ProjectName)_DynamoCustomization.xml" "C:\Users\oleg8\AppData\Roaming\Dynamo\Dynamo Revit\2.1\packages\RegEx\bin\$(ProjectName)_DynamoCustomization.xml"
+copy /Y "$(SolutionDir)RegEx\pkg.json" "C:\Users\oleg8\AppData\Roaming\Dynamo\Dynamo Revit\2.1\packages\RegEx\pkg.json"</PostBuildEvent>
+  </PropertyGroup>
 </Project>

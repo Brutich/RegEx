@@ -1,0 +1,20 @@
+{
+  "contains_binaries": true,
+  "contents": "",
+  "dependencies": [],
+  "description": "",
+  "engine": "dynamo",
+  "engine_metadata": "",
+  "engine_version": "2.1.0.7733",
+  "file_hash": null,
+  "group": "RegEx",
+  "keywords": [ "Regular", "Expression" ],
+  "license": "",
+  "name": "RegEx",
+  "node_libraries": [
+    "RegEx.dll, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null"
+  ],
+  "repository_url": "",
+  "site_url": "",
+  "version": "1.0.0"
+}
