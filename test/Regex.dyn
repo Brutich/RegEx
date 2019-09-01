@@ -1,0 +1,268 @@
+{
+  "Uuid": "c93df801-c8db-4e15-8729-35c9b19314f9",
+  "IsCustomNode": false,
+  "Description": null,
+  "Name": "Regex",
+  "ElementResolver": {
+    "ResolutionMap": {}
+  },
+  "Inputs": [],
+  "Outputs": [],
+  "Nodes": [
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "RegularExpressions.Regex.Regex@string",
+      "Id": "b7b28429936c4730baf3806dba54382b",
+      "Inputs": [
+        {
+          "Id": "ea606171ac0e441e931ca8e490ae3f97",
+          "Name": "pattern",
+          "Description": "string",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "e76ea373e66f46949c4d28fa40e720c8",
+          "Name": "Regex",
+          "Description": "Regex",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Regex.Regex (pattern: string): Regex"
+    },
+    {
+      "ConcreteType": "CoreNodeModels.Input.StringInput, CoreNodeModels",
+      "NodeType": "StringInputNode",
+      "InputValue": "[0-9]{2,5}",
+      "Id": "849168d2abe6463da407a5ecf5a9e2b2",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "71ad9b033e664a839fda2a6e06c4e135",
+          "Name": "",
+          "Description": "String",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Creates a string."
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "RegularExpressions.Regex.IsMatch@RegularExpressions.Regex,string",
+      "Id": "5914ac97031846a29ff09e6688cc3399",
+      "Inputs": [
+        {
+          "Id": "5a87006271ae414a9a3bfdbb7cf19c48",
+          "Name": "regex",
+          "Description": "Regex",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "d64130720bfb404c910e1c4cac63384c",
+          "Name": "text",
+          "Description": "string",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "2d3bea01127b4dbf994fd5cd77b92da0",
+          "Name": "bool",
+          "Description": "bool",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Regex.IsMatch (regex: Regex, text: string): bool"
+    },
+    {
+      "ConcreteType": "CoreNodeModels.Input.StringInput, CoreNodeModels",
+      "NodeType": "StringInputNode",
+      "InputValue": "av_avэль1245за_asa232v90",
+      "Id": "f6a5ccd49099419c9dc1e3ea94fa989f",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "532fa302061c40c28381024a71d4ea1f",
+          "Name": "",
+          "Description": "String",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Creates a string."
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "RegularExpressions.Regex.Matches@RegularExpressions.Regex,string",
+      "Id": "020d868d44f14d8dab7fcf71d86319cf",
+      "Inputs": [
+        {
+          "Id": "08cd31e1c55248d39063e3056c27ba97",
+          "Name": "regex",
+          "Description": "Regex",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "df522d9cd3dd41db8106560baeb1b9fd",
+          "Name": "text",
+          "Description": "string",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "61335c5446034724b4a7dc2e4f10af05",
+          "Name": "string[]",
+          "Description": "string[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Regex.Matches (regex: Regex, text: string): string[]"
+    }
+  ],
+  "Connectors": [
+    {
+      "Start": "e76ea373e66f46949c4d28fa40e720c8",
+      "End": "5a87006271ae414a9a3bfdbb7cf19c48",
+      "Id": "ab8c6e6dd7b648d089b3d4c47d8650a8"
+    },
+    {
+      "Start": "e76ea373e66f46949c4d28fa40e720c8",
+      "End": "08cd31e1c55248d39063e3056c27ba97",
+      "Id": "fabf58c3f93b4eba87cee45d66a077c8"
+    },
+    {
+      "Start": "71ad9b033e664a839fda2a6e06c4e135",
+      "End": "ea606171ac0e441e931ca8e490ae3f97",
+      "Id": "6c0e279b562a4071bbc71df2b8312360"
+    },
+    {
+      "Start": "532fa302061c40c28381024a71d4ea1f",
+      "End": "d64130720bfb404c910e1c4cac63384c",
+      "Id": "754c732011c04c2b8f3af7a644069252"
+    },
+    {
+      "Start": "532fa302061c40c28381024a71d4ea1f",
+      "End": "df522d9cd3dd41db8106560baeb1b9fd",
+      "Id": "61f03201d77c454c9e6db5a2feb01e6e"
+    }
+  ],
+  "Dependencies": [],
+  "Bindings": [],
+  "View": {
+    "Dynamo": {
+      "ScaleFactor": 1.0,
+      "HasRunWithoutCrash": true,
+      "IsVisibleInDynamoLibrary": true,
+      "Version": "2.1.0.7500",
+      "RunType": "Automatic",
+      "RunPeriod": "1000"
+    },
+    "Camera": {
+      "Name": "Default Camera",
+      "EyeX": -17.0,
+      "EyeY": 24.0,
+      "EyeZ": 50.0,
+      "LookX": 12.0,
+      "LookY": -13.0,
+      "LookZ": -58.0,
+      "UpX": 0.0,
+      "UpY": 1.0,
+      "UpZ": 0.0
+    },
+    "NodeViews": [
+      {
+        "ShowGeometry": true,
+        "Name": "Regex.Regex",
+        "Id": "b7b28429936c4730baf3806dba54382b",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 277.89992922639215,
+        "Y": -48.883154473657385
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "String",
+        "Id": "849168d2abe6463da407a5ecf5a9e2b2",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 139.02393379647958,
+        "Y": -48.63064331654715
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Regex.IsMatch",
+        "Id": "5914ac97031846a29ff09e6688cc3399",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 663.66719337937184,
+        "Y": -49.898142107683981
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "String",
+        "Id": "f6a5ccd49099419c9dc1e3ea94fa989f",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 283.1272137680794,
+        "Y": 184.55952315519875
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Regex.Matches",
+        "Id": "020d868d44f14d8dab7fcf71d86319cf",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 658.121079553742,
+        "Y": 119.97597055913499
+      }
+    ],
+    "Annotations": [],
+    "X": 315.92660975225442,
+    "Y": 281.730256972025,
+    "Zoom": 1.5638157677245763
+  }
+}
