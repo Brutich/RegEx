@@ -2,18 +2,16 @@
   "contains_binaries": true,
   "contents": "",
   "dependencies": [],
-  "description": "",
+  "description": "Regular expressions in Dynamo",
   "engine": "dynamo",
   "engine_metadata": "",
-  "engine_version": "2.1.0.7733",
+  "engine_version": "2.0.3.8811",
   "file_hash": null,
-  "group": "RegEx",
-  "keywords": [ "Regular", "Expression" ],
+  "group": "",
+  "keywords": [ "regular", "expressions" ],
   "license": "",
   "name": "RegEx",
-  "node_libraries": [
-    "RegEx.dll, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null"
-  ],
+  "node_libraries": [ "RegEx, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" ],
   "repository_url": "",
   "site_url": "",
   "version": "1.0.0"

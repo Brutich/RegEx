@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Text;
+using Dynamo.Graph.Nodes;
 using CSRegex = System.Text.RegularExpressions.Regex;
 
 
@@ -14,15 +15,20 @@ namespace RegularExpressions
     public class Regex
     {
         private CSRegex Pattern { get; set; }
-
+        
+        private Regex(String pattern)
+        {
+            Pattern = new CSRegex(pattern);
+        }
 
         /// <summary>
         ///     Regular expression by pattern.
         /// </summary>
         /// <param name="pattern"></param>
-        public Regex(String pattern)
+        [NodeCategory("Create")]
+        public static Regex ByPattern(String pattern)
         {
-            Pattern = new CSRegex(pattern);
+            return new Regex(pattern);
         }
 
 

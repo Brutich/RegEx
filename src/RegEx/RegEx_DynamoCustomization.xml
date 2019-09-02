@@ -4,8 +4,13 @@
     <name>RegEx</name>
   </assembly>
   <namespaces>
+    <!--Remap Namespaces-->
     <namespace name="RegularExpressions">
-      <category>RegEx.Regex</category>
+      <category>RegEx</category>
     </namespace>
   </namespaces>
+  <classes>
+    <!--Remap Class Names-->
+    <class name="RegEx.RegularExpressions.Regex" shortname="ByPattern"/>
+  </classes>
 </doc>
