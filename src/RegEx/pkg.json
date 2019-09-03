@@ -2,7 +2,8 @@
   "contains_binaries": true,
   "contents": "",
   "dependencies": [],
-  "description": "Regular expressions in Dynamo",
+  "description": "Regular expressions provide a powerful, flexible, and efficient method for processing text. The extensive pattern-matching notation of regular expressions enables you to quickly parse large amounts of text to find specific character patterns; to validate text to ensure that it matches a predefined pattern (such as an email address);
+  to extract, edit, replace, or delete text substrings; and to add the extracted strings to a collection in order to generate a report. For many applications that deal with strings or that parse large blocks of text, regular expressions are an indispensable tool.",
   "engine": "dynamo",
   "engine_metadata": "",
   "engine_version": "2.0.3.8811",
@@ -14,5 +15,5 @@
   "node_libraries": [ "RegEx, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" ],
   "repository_url": "",
   "site_url": "",
-  "version": "1.0.0"
+  "version": "1.2.0"
 }

@@ -72,5 +72,17 @@ namespace RegularExpressions
         {
             return regex.Pattern.Replace(input, replacement);
         }
+
+
+        /// <summary>
+        ///     Splits an input string into an array of substrings at the positions defined by a regular expression match.
+        /// </summary>
+        /// <param name="regex"></param>
+        /// <param name="input"></param>
+        /// <returns></returns>
+        public static string[] Split(Regex regex, String input)
+        {
+            return regex.Pattern.Split(input);
+        }
     }
 }
