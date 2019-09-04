@@ -10,4 +10,6 @@ Regular expressions provide a powerful, flexible, and efficient method for proce
 
 ## Regular Expression Examples ##
 ### Example 1: Replacing Substrings ###
+Assume that a mailing list contains names that sometimes include a title (Mr., Mrs., Miss, or Ms.) along with a first and last name. If you do not want to include the titles when you generate envelope labels from the list, you can use a regular expression to remove the titles, as the following example illustrates.
 ![Image](https://github.com/Brutich/RegEx/blob/master/doc/regex-examples/examples-001.png)
+The regular expression pattern ```(Mr\.? |Mrs\.? |Miss |Ms\.? )``` matches any occurrence of "Mr ", "Mr. ", "Mrs ", "Mrs. ", "Miss ", "Ms or "Ms. ". Regex.Replace node replaces the matched string with empty string; in other words, it removes it from the original string.
