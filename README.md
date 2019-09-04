@@ -1,7 +1,7 @@
 ![Image](https://github.com/Brutich/RegEx/blob/master/doc/regexlogo-1.jpg?branch=master)
 
 
-# Regular expressions in Dynamo #
+# Regular expressions in [Dynamo](https://github.com/DynamoDS/Dynamo) #
 
 This Dynamo package provides access to the Regular expressions library.
 
