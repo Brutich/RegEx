@@ -10,4 +10,4 @@ Regular expressions provide a powerful, flexible, and efficient method for proce
 
 ## Regular Expression Examples ##
 ### Example 1: Replacing Substrings ###
-[Image](https://github.com/Brutich/RegEx/blob/master/doc/regex-examples/examples-001.png)
+![Image](https://github.com/Brutich/RegEx/blob/master/doc/regex-examples/examples-001.png)
