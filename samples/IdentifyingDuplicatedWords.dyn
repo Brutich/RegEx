@@ -1,0 +1,244 @@
+{
+  "Uuid": "77ef212a-122a-4973-af19-67f3faec62eb",
+  "IsCustomNode": false,
+  "Description": null,
+  "Name": "IdentifyingDuplicatedWords",
+  "ElementResolver": {
+    "ResolutionMap": {}
+  },
+  "Inputs": [],
+  "Outputs": [],
+  "Nodes": [
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "RegularExpressions.Regex.ByPattern@string",
+      "Id": "cb13c7d963054dafa59d3128767c7ecb",
+      "Inputs": [
+        {
+          "Id": "a96abe4b9243408c909ee5ae884f2314",
+          "Name": "pattern",
+          "Description": "string",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "5f2e0f055d6f4a14b881d80cf657bc59",
+          "Name": "Regex",
+          "Description": "Regex",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Regular expression by pattern.\n\nRegex.ByPattern (pattern: string): Regex"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
+      "NodeType": "CodeBlockNode",
+      "Code": "\"This this is a nice day. What about this? This tastes good. I saw a a dog.\";",
+      "Id": "3d470879b062454b8e6315f4f8f8717c",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "d4d2b74d49a7488b96b0530bb9fb0027",
+          "Name": "",
+          "Description": "Value of expression at line 1",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Allows for DesignScript code to be authored directly"
+    },
+    {
+      "ConcreteType": "CoreNodeModels.Input.StringInput, CoreNodeModels",
+      "NodeType": "StringInputNode",
+      "InputValue": "\\b(\\w+?)\\s\\1\\b",
+      "Id": "68c4a702ff06449d9e32c93796e76ed3",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "f4af61900ee846169753c8652f6fd5b5",
+          "Name": "",
+          "Description": "String",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Creates a string."
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "RegularExpressions.Regex.Matches@var,string",
+      "Id": "794dccd7447641e4998350029f1335f7",
+      "Inputs": [
+        {
+          "Id": "cb0e12a578804727a14892013ddbc347",
+          "Name": "regex",
+          "Description": "var",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "e4c5972ffa274d8eacf9b9e5a1476466",
+          "Name": "input",
+          "Description": "string",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "96b1aa94342344a99677cb802f3e2394",
+          "Name": "string[]",
+          "Description": "string[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Searches an input string for all occurrences of a regular expression and returns all the matches.\n\nRegex.Matches (regex: var, input: string): string[]"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
+      "NodeType": "CodeBlockNode",
+      "Code": "\"\\\\b(\\\\w+?)\\\\s\\\\1\\\\b\";",
+      "Id": "b0d93114d2f3427cbd1c1dd2b1f9d7e4",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "ed92477b0a8b4d38ada04997ef0aedf1",
+          "Name": "",
+          "Description": "Value of expression at line 1",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Allows for DesignScript code to be authored directly"
+    }
+  ],
+  "Connectors": [
+    {
+      "Start": "5f2e0f055d6f4a14b881d80cf657bc59",
+      "End": "cb0e12a578804727a14892013ddbc347",
+      "Id": "4d9e8874fe2f420a90d67ccf9f183948"
+    },
+    {
+      "Start": "d4d2b74d49a7488b96b0530bb9fb0027",
+      "End": "e4c5972ffa274d8eacf9b9e5a1476466",
+      "Id": "0dac2b3e6d7e48beba30563e9ced9741"
+    },
+    {
+      "Start": "ed92477b0a8b4d38ada04997ef0aedf1",
+      "End": "a96abe4b9243408c909ee5ae884f2314",
+      "Id": "feb9aff47ea142778f0bf289e4b1d66d"
+    },
+    {
+      "Start": "ed92477b0a8b4d38ada04997ef0aedf1",
+      "End": "a96abe4b9243408c909ee5ae884f2314",
+      "Id": "118672d2615d4eca87d885049be46922"
+    }
+  ],
+  "Dependencies": [],
+  "Bindings": [],
+  "View": {
+    "Dynamo": {
+      "ScaleFactor": 1.0,
+      "HasRunWithoutCrash": true,
+      "IsVisibleInDynamoLibrary": true,
+      "Version": "2.1.0.7500",
+      "RunType": "Automatic",
+      "RunPeriod": "1000"
+    },
+    "Camera": {
+      "Name": "Default Camera",
+      "EyeX": -17.0,
+      "EyeY": 24.0,
+      "EyeZ": 50.0,
+      "LookX": 12.0,
+      "LookY": -13.0,
+      "LookZ": -58.0,
+      "UpX": 0.0,
+      "UpY": 1.0,
+      "UpZ": 0.0
+    },
+    "NodeViews": [
+      {
+        "ShowGeometry": true,
+        "Name": "Regex.ByPattern",
+        "Id": "cb13c7d963054dafa59d3128767c7ecb",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 317.80255996363246,
+        "Y": 373.12862366297088
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Names",
+        "Id": "3d470879b062454b8e6315f4f8f8717c",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": -141.714518875544,
+        "Y": 502.530165025534
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "String",
+        "Id": "68c4a702ff06449d9e32c93796e76ed3",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 141.907242905834,
+        "Y": 270.351277168991
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Regex.Matches",
+        "Id": "794dccd7447641e4998350029f1335f7",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 603.75828968453015,
+        "Y": 372.12686599559964
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Code Block",
+        "Id": "b0d93114d2f3427cbd1c1dd2b1f9d7e4",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 62.5591283341676,
+        "Y": 377.08513970732
+      }
+    ],
+    "Annotations": [],
+    "X": 315.94270538168837,
+    "Y": -79.241593776834179,
+    "Zoom": 1.3153754050082145
+  }
+}
