@@ -12,8 +12,9 @@
   "keywords": [ "regular", "expressions" ],
   "license": "",
   "name": "RegEx",
-  "node_libraries": [ "RegEx, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" ],
-  "repository_url": "",
+  "node_libraries": [ "RegEx, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null",
+  "RegExUI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null"],
+  "repository_url": "https://github.com/Brutich/RegEx",
   "site_url": "",
   "version": "1.2.0"
 }

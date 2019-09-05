@@ -34,12 +34,12 @@ namespace RegularExpressions
         /// <param name="pattern"></param>
         /// <param name="options"></param>
         [NodeCategory("Create")]
-        public static Regex ByPattern(string pattern, Option[] options)
+        public static Regex ByPattern(string pattern, Option[] options = null)
         {
             if (pattern == null)
                 return null;
 
-            if (options == null | !options.Any())
+            if (options == null || !options.Any())
                 return new Regex(pattern);
 
             CSRegexOptions regexOptions = options.First().RegexOption;
