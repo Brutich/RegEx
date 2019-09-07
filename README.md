@@ -16,7 +16,7 @@ The regular expression pattern ```(Mr\.? |Mrs\.? |Miss |Ms\.? )``` matches any o
 
 ### Example 2: Identifying Duplicated Words ###
 Accidentally duplicating words is a common error that writers make. A regular expression can be used to identify duplicated words, as the following example shows.
-![Image](https://github.com/Brutich/RegEx/blob/master/doc/regex-examples/examples-002.png)
+![Image](https://github.com/Brutich/RegEx/blob/develop/doc/regex-examples/examples-002.png)
 The Regex.Matches method is called with regular expression options set to IgnoreCase. Therefore, the match operation is case-insensitive, and the example identifies the substring "This this" as a duplication.
 
 Note that the input string includes the substring "this? This". However, because of the intervening punctuation mark, it is not identified as a duplication.
