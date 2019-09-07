@@ -16,7 +16,7 @@ namespace RegularExpressions
     public class Regex
     {
 
-        private CSRegex Pattern { get; set; }        
+        private CSRegex Pattern { get; set; }
 
         private Regex(String pattern)
         {
@@ -28,13 +28,28 @@ namespace RegularExpressions
             Pattern = new CSRegex(pattern, options);
         }
 
+
         /// <summary>
-        ///     Regular expression by pattern.
+        ///     Regular expression pattern.
         /// </summary>
-        /// <param name="pattern"></param>
+        /// <param name="pattern">The regular expression pattern to match.</param>
+        [NodeCategory("Create")]
+        public static Regex ByPattern(string pattern)
+        {
+            if (pattern == null)
+                return null;
+
+            return new Regex(pattern);
+        }
+
+
+        /// <summary>
+        ///     Regular expression by pattern and options.
+        /// </summary>
+        /// <param name="pattern">The regular expression pattern to match.</param>
         /// <param name="options"></param>
         [NodeCategory("Create")]
-        public static Regex ByPattern(string pattern, Option[] options = null)
+        public static Regex ByPattern(string pattern, Option[] options)
         {
             if (pattern == null)
                 return null;

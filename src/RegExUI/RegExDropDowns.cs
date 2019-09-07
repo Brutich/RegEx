@@ -44,7 +44,7 @@ namespace RegularExpressions
     [IsDesignScriptCompatible]
     public class FiltersByRule : RegExDropDownBase
     {
-        private const string NO_PARAMETER_FILTERS = "No options available.";
+        private const string NO_OPTIONS = "No options available.";
         private const string outputName = "Regular expression option";
 
         public FiltersByRule() : base(outputName) { }
@@ -67,7 +67,7 @@ namespace RegularExpressions
 
         public override IEnumerable<AssociativeNode> BuildOutputAst(List<AssociativeNode> inputAstNodes)
         {
-            if (!CanBuildOutputAst(NO_PARAMETER_FILTERS))
+            if (!CanBuildOutputAst(NO_OPTIONS))
                 return new[] { AstFactory.BuildAssignment(GetAstIdentifierForOutputIndex(0), AstFactory.BuildNullNode()) };
 
             var filterName = AstFactory.BuildStringNode((string)Items[SelectedIndex].Item);

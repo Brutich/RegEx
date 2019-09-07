@@ -18,7 +18,7 @@
         {
           "Id": "a96abe4b9243408c909ee5ae884f2314",
           "Name": "pattern",
-          "Description": "string",
+          "Description": "The regular expression pattern to match.\n\nstring",
           "UsingDefaultValue": false,
           "Level": 2,
           "UseLevels": false,
@@ -46,7 +46,7 @@
         }
       ],
       "Replication": "Auto",
-      "Description": "Regular expression by pattern.\n\nRegex.ByPattern (pattern: string, options: var[]): Regex"
+      "Description": "Regular expression pattern.\n\nRegex.ByPattern (pattern: string, options: var[]): Regex"
     },
     {
       "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
@@ -56,7 +56,7 @@
       "Inputs": [],
       "Outputs": [
         {
-          "Id": "d4d2b74d49a7488b96b0530bb9fb0027",
+          "Id": "6f457df5ed69489983d36f5fd531056a",
           "Name": "",
           "Description": "Value of expression at line 1",
           "UsingDefaultValue": false,
@@ -149,15 +149,15 @@
       "Description": "Represents collection of Regular Expression options"
     },
     {
-      "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
-      "NodeType": "CodeBlockNode",
-      "Code": "[x];",
-      "Id": "a29cece4d6474694b7a94d6d1c2d44af",
+      "ConcreteType": "CoreNodeModels.CreateList, CoreNodeModels",
+      "VariableInputPorts": true,
+      "NodeType": "ExtensionNode",
+      "Id": "092c39ecb7ef4cc9ab6ea701525908b0",
       "Inputs": [
         {
-          "Id": "2607b025be834154859eb55959f87385",
-          "Name": "x",
-          "Description": "x",
+          "Id": "9e56db69148a44079f4bea8b16d673b4",
+          "Name": "item0",
+          "Description": "Item Index #0",
           "UsingDefaultValue": false,
           "Level": 2,
           "UseLevels": false,
@@ -166,9 +166,9 @@
       ],
       "Outputs": [
         {
-          "Id": "dbc8e949c5154c389cfea38098fa8ebb",
-          "Name": "",
-          "Description": "Value of expression at line 1",
+          "Id": "534f221c399f479fa6c65330ab795c6a",
+          "Name": "list",
+          "Description": "A list",
           "UsingDefaultValue": false,
           "Level": 2,
           "UseLevels": false,
@@ -176,7 +176,7 @@
         }
       ],
       "Replication": "Disabled",
-      "Description": "Allows for DesignScript code to be authored directly"
+      "Description": "Makes a new list out of the given inputs"
     }
   ],
   "Connectors": [
@@ -186,9 +186,9 @@
       "Id": "4d9e8874fe2f420a90d67ccf9f183948"
     },
     {
-      "Start": "d4d2b74d49a7488b96b0530bb9fb0027",
+      "Start": "6f457df5ed69489983d36f5fd531056a",
       "End": "e4c5972ffa274d8eacf9b9e5a1476466",
-      "Id": "0dac2b3e6d7e48beba30563e9ced9741"
+      "Id": "1d37fc7feea14187a6f577b66e38a240"
     },
     {
       "Start": "f4af61900ee846169753c8652f6fd5b5",
@@ -197,13 +197,13 @@
     },
     {
       "Start": "80e03246e52641928194f1ca766f30f6",
-      "End": "2607b025be834154859eb55959f87385",
-      "Id": "662f13dc007448f59c1ab325d962bef8"
+      "End": "9e56db69148a44079f4bea8b16d673b4",
+      "Id": "e7f45b3b5bb146d0b62ea1bada962168"
     },
     {
-      "Start": "dbc8e949c5154c389cfea38098fa8ebb",
+      "Start": "534f221c399f479fa6c65330ab795c6a",
       "End": "5bb5149d27b841a69e0a7cd360ca640d",
-      "Id": "c2201c2fc0e04c8faa91c8dafd9de69b"
+      "Id": "ee02329a6b014ef3a12e11176d75115d"
     }
   ],
   "Dependencies": [],
@@ -242,13 +242,13 @@
       },
       {
         "ShowGeometry": true,
-        "Name": "Names",
+        "Name": "Input String",
         "Id": "3d470879b062454b8e6315f4f8f8717c",
         "IsSetAsInput": false,
         "IsSetAsOutput": false,
         "Excluded": false,
-        "X": -137.56268875947421,
-        "Y": 559.0941391012625
+        "X": -147.60656822111036,
+        "Y": 541.87606002417192
       },
       {
         "ShowGeometry": true,
@@ -282,18 +282,18 @@
       },
       {
         "ShowGeometry": true,
-        "Name": "List of Options",
-        "Id": "a29cece4d6474694b7a94d6d1c2d44af",
+        "Name": "List Create",
+        "Id": "092c39ecb7ef4cc9ab6ea701525908b0",
         "IsSetAsInput": false,
         "IsSetAsOutput": false,
         "Excluded": false,
-        "X": 174.4840612996104,
-        "Y": 442.03582546528105
+        "X": 162.09659593359959,
+        "Y": 440.85182917082807
       }
     ],
     "Annotations": [],
-    "X": 522.05619494554139,
-    "Y": -117.49618466311188,
-    "Zoom": 1.3938837133076687
+    "X": 540.29015442975981,
+    "Y": -175.60144928004155,
+    "Zoom": 1.5532227559468845
   }
 }
