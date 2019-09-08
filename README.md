@@ -20,3 +20,32 @@ Accidentally duplicating words is a common error that writers make. A regular ex
 The Regex.Matches method is called with regular expression options set to IgnoreCase. Therefore, the match operation is case-insensitive, and the example identifies the substring "This this" as a duplication.
 
 Note that the input string includes the substring "this? This". However, because of the intervening punctuation mark, it is not identified as a duplication.
+
+# Getting Started
+
+## Installation
+The toolkits are not yet available on the Dynamo Package Manager. You can install them manually by following the instructions under the Alternative installation methods section of this document.
+
+## Alternative installation methods
+
+### Manual install
+If you prefer to install one of the more experimental/work-in-progress builds, you can still follow the instructions below.
+
+- Download the latest release from the [Releases page](https://github.com/Brutich/RegEx/releases)
+- unzip the downloaded file
+- once unzipped, double-check that all `.dll` files in the package's `bin` folder have been [unblocked](https://blogs.msdn.microsoft.com/delay/p/unblockingdownloadedfile/)
+- copy the package folder to the location of your Dynamo packages  :
+    - `%appdata%\Dynamo\Dynamo Core\2\packages` for Dynamo Sandbox, replacing `2` with your version of Dynamo
+    - `%appdata%\Dynamo\Dynamo Revit\2\packages` for Dynamo for Revit, replacing `2` with your version of Dynamo
+- start Dynamo, the package should now be listed as in the library and in Dynamo's `Package Manager`
+
+## Prerequisites
+
+This project requires the following applications or libraries be installed :
+
+```
+Dynamo : version 2.1 or later
+```
+```
+.NET : version 4.7.1 or later
+```
