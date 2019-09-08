@@ -7,6 +7,7 @@ Regular expressions provide a powerful, flexible, and efficient method for proce
 [Regular Expression Language - Quick Reference](https://docs.microsoft.com/en-us/dotnet/standard/base-types/regular-expression-language-quick-reference?view=netframework-4.8)
 
 Regular expressions are now available in Dynamo with this package.
+Package based on the regular expression engine, which is represented by the System.Text.RegularExpressions.Regex object in .NET
 
 ## Regular Expression Examples ##
 ### Example 1: Replacing Substrings ###
