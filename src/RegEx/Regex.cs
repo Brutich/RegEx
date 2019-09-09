@@ -61,7 +61,7 @@ namespace RegularExpressions
             options = options.Skip(1).ToArray();
 
             foreach (var opt in options)
-                regexOptions = regexOptions | opt.RegexOption;
+                regexOptions |= opt.RegexOption;
 
             return new Regex(pattern, regexOptions);
         }

@@ -19,7 +19,6 @@ namespace RegularExpressions
         [JsonConstructor]
         public RegExDropDownBase(string value, IEnumerable<PortModel> inPorts, IEnumerable<PortModel> outPorts) : base(value, inPorts, outPorts) { }
 
-
         /// <summary>
         /// Whether it have valid Enumeration values to the output.
         /// </summary>
@@ -38,7 +37,7 @@ namespace RegularExpressions
         }
     }
 
-    [NodeName("All Options")]
+    [NodeName("Options")]
     [NodeDescription("Represents collection of Regular Expression options")]
     [NodeCategory("RegEx.Option")]
     [IsDesignScriptCompatible]

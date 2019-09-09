@@ -134,6 +134,12 @@
       <Name>RegEx</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\RegularExpressions.Option.Options.Large.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\RegularExpressions.Option.Options.Small.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
     <PostBuildEvent>copy /Y "$(TargetDir)$(ProjectName).dll" "C:\Users\oleg8\AppData\Roaming\Dynamo\Dynamo Revit\2.1\packages\RegEx\bin\$(ProjectName).dll"</PostBuildEvent>
