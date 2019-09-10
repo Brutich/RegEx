@@ -41,15 +41,15 @@ namespace RegularExpressions
     [NodeDescription("Represents collection of Regular Expression options")]
     [NodeCategory("RegEx.Option")]
     [IsDesignScriptCompatible]
-    public class FiltersByRule : RegExDropDownBase
+    public class RegexOptions : RegExDropDownBase
     {
         private const string NO_OPTIONS = "No options available.";
         private const string outputName = "Regular expression option";
 
-        public FiltersByRule() : base(outputName) { }
+        public RegexOptions() : base(outputName) { }
 
         [JsonConstructor]
-        public FiltersByRule(IEnumerable<PortModel> inPorts, IEnumerable<PortModel> outPorts) : base(outputName, inPorts, outPorts) { }
+        public RegexOptions(IEnumerable<PortModel> inPorts, IEnumerable<PortModel> outPorts) : base(outputName, inPorts, outPorts) { }
 
         protected override SelectionState PopulateItemsCore(string currentSelection)
         {
