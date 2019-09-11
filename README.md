@@ -25,7 +25,7 @@ Note that the input string includes the substring "this? This". However, because
 # Getting Started
 
 ## Installation
-The toolkits are not yet available on the Dynamo Package Manager. You can install them manually by following the instructions under the Alternative installation methods section of this document.
+The package is available on the Dynamo Package Manager. Also you can install them manually by following the instructions under the Alternative installation methods section of this document.
 
 ## Alternative installation methods
 
