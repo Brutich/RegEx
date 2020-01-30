@@ -33,12 +33,12 @@ The package is available on the Dynamo Package Manager. Also you can install the
 If you prefer to install one of the more experimental/work-in-progress builds, you can still follow the instructions below.
 
 - Download the latest release from the [Releases page](https://github.com/Brutich/RegEx/releases)
-- unzip the downloaded file
-- once unzipped, double-check that all `.dll` files in the package's `bin` folder have been [unblocked](https://blogs.msdn.microsoft.com/delay/p/unblockingdownloadedfile/)
-- copy the package folder to the location of your Dynamo packages  :
+- Unzip the downloaded file
+- Once unzipped, double-check that all `.dll` files in the package's `bin` folder have been [unblocked](https://blogs.msdn.microsoft.com/delay/p/unblockingdownloadedfile/)
+- Copy the package folder to the location of your Dynamo packages  :
     - `%appdata%\Dynamo\Dynamo Core\2\packages` for Dynamo Sandbox, replacing `2` with your version of Dynamo
     - `%appdata%\Dynamo\Dynamo Revit\2\packages` for Dynamo for Revit, replacing `2` with your version of Dynamo
-- start Dynamo, the package should now be listed as in the library and in Dynamo's `Package Manager`
+- Start Dynamo, the package should now be listed as in the library and in Dynamo's `Package Manager`
 
 ## Prerequisites
 
