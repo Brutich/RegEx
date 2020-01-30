@@ -1,4 +1,4 @@
-![Image](https://github.com/brutich/regex/blob/master/doc/regexlogo-1.JPG?branch=master)
+![Image](https://github.com/brutich/regex/blob/master/doc/regexlogo-1-1.JPG?branch=master)
 
 
 # Regular expressions in [Dynamo](https://github.com/dynamods/dynamo) #
